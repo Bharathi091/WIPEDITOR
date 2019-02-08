@@ -1,0 +1,72 @@
+<mvc:View controllerName="wip.controller.Report" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:sl="sap.ui.comp.navpopover"
+	xmlns:smartChart="sap.ui.comp.smartchart" xmlns:core="sap.ui.core" xmlns:smartTable="sap.ui.comp.smarttable" xmlns:m="sap.m"
+	xmlns:l="sap.ui.layout" xmlns:uitbl="sap.ui.table" xmlns:smartFilterBar="sap.ui.comp.smartfilterbar" xmlns:tnt="sap.tnt"
+	xmlns:smartField="sap.ui.comp.smartfield" xmlns:smartFilter="sap.ui.core.Control" xmlns:f="sap.ui.layout.form"
+	xmlns:customData="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:semantic="sap.m.semantic"
+	xmlns:footerbar="sap.ushell.ui.footerbar" xmlns:smartList="sap.ui.comp.smartlist">
+	<Page title="Title">
+		<content>
+			<smartFilterBar:SmartFilterBar id="SmartFilterBar" search="gotoPress" persistencyKey="SmartFilterBar" entityType="WipMatters"
+				customData:dateFormatSettings="\{&quot;UTC&quot;:true\}" initialise="initiatedFilterbars" filterChange="filterChangeData">
+				<smartFilterBar:controlConfiguration>
+					<!--<smartFilterBar:ControlConfiguration key="Client" label="{i18n>Client}" index="3" id="Client" visibleInAdvancedArea="true"-->
+					<!--	preventInitialDataFetchInValueHelpDialog="true" filterType="multi"/>-->
+					<smartFilterBar:ControlConfiguration key="Pspid" label="{i18n>Matter}" index="6" id="Matter" visibleInAdvancedArea="true"
+						preventInitialDataFetchInValueHelpDialog="true" filterType="multi"/>
+				</smartFilterBar:controlConfiguration>
+			</smartFilterBar:SmartFilterBar>
+			<SplitApp id="SplitAppDemo" initialDetail="detail" initialMaster="master" orientationChange="onOrientationChange">
+				<detailPages>
+					<Page title="detailPages"></Page>
+				</detailPages>
+				<masterPages>
+					<Page title="masterPages">
+						<!--<List growing="true" growingScrollToLoad="true" id="list" items="{ path : 'invoice>/WipMattersSet' }" select="onSelect"-->
+						<!--	noDataText="{i18n>masterListNoDataText}">-->
+						<!--	<items>-->
+						<!--		<ObjectListItem counter="0" title="{invoice>/Matter}"></ObjectListItem>-->
+						<!--	</items>-->
+						<!--</List>-->
+						<smartList:SmartList id="ItemsST" smartFilter="SmartFilterBar" entitySet="WipMattersSet" header="Customers List" showRowCount="true" showFullScreenButton="true"
+							enableAutoBinding="false" >
+							<smartList:listItemTemplate>
+								<StandardListItem title="{Pspid}" info="{ClientName}" description="{Pspid}"/>
+							</smartList:listItemTemplate>
+						</smartList:SmartList>
+						<!--<smartTable:SmartTable enableCustomFilter="false" smartFilterId="SmartFilterBar" visible="true" id="smartTable_ResponsiveTable0"-->
+						<!--	editable="false" entitySet="WipMattersSet" tableType="AnalyticalTable" useVariantManagement="true" persistencyKey="SmartTablePKey"-->
+						<!--	useTablePersonalisation="true" header="{i18n>Results}" showRowCount="true" useExportToExcel="true" beforeRebindTable="onBeforeRebindTable"-->
+						<!--	enableAutoBinding="false" dataReceived="onDataReceived" fitContainer="true">-->
+						<!--	<smartTable:layoutData>-->
+						<!--		<m:FlexItemData growFactor="1" baseSize="0%"/>-->
+						<!--	</smartTable:layoutData>-->
+						<!--	<smartTable:customToolbar>-->
+						<!--		<Toolbar>-->
+						<!--			<m:ToolbarSpacer/>-->
+						<!--			<Button id="pdfBt1d0" visible="false" press="previewPDF" icon="sap-icon://pdf-attachment"/>-->
+						<!--		</Toolbar>-->
+						<!--	</smartTable:customToolbar>-->
+						<!--	<uitbl:Table selectionMode="None" visibleRowCountMode="Auto" id="dataTable" fixedColumnCount="0" columnResize="oncolumnResize">-->
+						<!--		<uitbl:columns>-->
+						<!--			<uitbl:Column width="9rem" sortProperty="Pspid" showSortMenuEntry="true" filterProperty="Pspid" showFilterMenuEntry="true"-->
+						<!--				autoResizable="true">-->
+						<!--				<uitbl:customData>-->
+						<!--					<core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;Pspid&quot;, &quot;leadingProperty&quot;: &quot;Pspid&quot;}"/>-->
+						<!--				</uitbl:customData>-->
+						<!--				<uitbl:label>-->
+						<!--					<m:Text text="{/#TK_Rate/Pspid/@sap:label}"/>-->
+						<!--				</uitbl:label>-->
+						<!--				<uitbl:template>-->
+						<!--					<m:Text width="100%" text="{Pspid}"/>-->
+						<!--				</uitbl:template>-->
+						<!--			</uitbl:Column>-->
+						<!--		</uitbl:columns>-->
+						<!--	</uitbl:Table>-->
+						
+						<!--</smartTable:SmartTable>-->
+					</Page>
+				</masterPages>
+			</SplitApp>
+		</content>
+	</Page>
+</mvc:View>
