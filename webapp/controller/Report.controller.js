@@ -26,7 +26,7 @@ sap.ui.define([
 			this.getView().byId("hide").setVisible(false);
 			this.getView().byId("show").setVisible(true);
 		},
-		onHide1: function() {
+		onHide1: function() { 
 			var oSplit = this.getView().byId("SplitApp");
 			oSplit.setMode(sap.m.SplitAppMode.StretchCompressMode);
 			this.getView().byId("show").setVisible(false);
