@@ -15,9 +15,12 @@
 						preventInitialDataFetchInValueHelpDialog="true" filterType="multi"/>
 				</smartFilterBar:controlConfiguration>
 			</smartFilterBar:SmartFilterBar>
-			<SplitApp id="SplitAppDemo" initialDetail="detail" initialMaster="master" orientationChange="onOrientationChange">
-				<detailPages>
-					<Page title="detailPages"></Page>
+			<SplitApp id="SplitApp" initialDetail="detail" initialMaster="master" orientationChange="onOrientationChange">
+				<detailPages >
+					<Page title="detailPages" showHeader="false">
+					<Button icon="sap-icon://menu2" id="hide" press="onHide"></Button>
+					<Button icon="sap-icon://menu2" visible="false" id="show" press="onHide1"></Button>
+					</Page>
 				</detailPages>
 				<masterPages>
 					<Page title="masterPages">

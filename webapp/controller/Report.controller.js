@@ -19,7 +19,20 @@ sap.ui.define([
 	
 			
 
+		},
+		onHide: function() {
+			var oSplit = this.getView().byId("SplitApp");
+			oSplit.setMode(sap.m.SplitAppMode.HideMode);
+			this.getView().byId("hide").setVisible(false);
+			this.getView().byId("show").setVisible(true);
+		},
+		onHide1: function() {
+			var oSplit = this.getView().byId("SplitApp");
+			oSplit.setMode(sap.m.SplitAppMode.StretchCompressMode);
+			this.getView().byId("show").setVisible(false);
+			this.getView().byId("hide").setVisible(true);
 		}
+
 
 		// gotoPress: function() {
 		// 	debugger;
