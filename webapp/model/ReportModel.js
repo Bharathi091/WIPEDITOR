@@ -8,14 +8,54 @@ sap.ui.define([
 		constructor: function(data) {
 			BaseObject.call(this);
 		
-			this.settings = {
-				ignoreColumns:"TkSearch,OpgrpblSearch,TkRateSrch,BandlRateSrch,ValidOn",
-				RadioButtonSel1:true,
-				RadioButtonSel2:false,
-				CheckBoxes:{
-                   TkRateSrch:true,
-                   BandlRateSrch:true
-                }
+			this.Inputs = {
+				hideFilterBar: true,
+				IconTabs: {
+					Home: true,
+					Narrative_Edits: false,
+					Line_Item_Edits: false,
+					Line_Item_Transfers: false
+				},
+				Countries_collection: [{
+				    Key: "dataEn",
+				    Text:"English" 
+				},
+				{
+				    Key: "dataFr",
+				    Text:"French" 
+				},
+				{
+				    Key: "dataIt",
+				    Text:"Italin" 
+				}
+				],
+				Toolbar:{
+					Reviewed: false,
+					Unreview: false,
+					Save: false,
+					Save_Layout: true,
+					Modify_Reverse: false,
+					Consolidate: false,
+					Updatecodes: false,
+					GlobalSpellCheck: false,
+					Mass_Transfer: false,
+					Split_Transfer: false,
+					Replace_Words:false
+				},
+				
+				ToolbarEnable:{
+					Reviewed: false,
+					Unreview: false,
+					Replace_Words:false,
+					Modify_Reverse: false,
+					Updatecodes: false,
+					Consolidate: false,
+					Mass_Transfer: false,
+					Split_Transfer: false
+				}
+					
+				
+
 			};
 
 		}
