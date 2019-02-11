@@ -2,15 +2,15 @@ sap.ui.define([
 	"wip/controller/BaseController",
 	"sap/ui/model/json/JSONModel",
 	"wip/model/formatter",
-
 	"sap/ui/model/Filter",
 	"wip/model/ReportModel",
-	"sap/ui/model/FilterOperator"
-
-], function(BaseController, JSONModel, formatter, Filter, ReportModel, FilterOperator) {
+	"sap/ui/model/FilterOperator",
+     "sap/ui/core/UIComponent"
+], function(BaseController, JSONModel, formatter, Filter, ReportModel, FilterOperator,UIComponent) {
 	"use strict";
 
 	return BaseController.extend("wip.controller.Report", {
+		
 		onInit: function() {
 			debugger;
 
@@ -20,12 +20,14 @@ sap.ui.define([
 			this.getView().setModel(this.jsonModel, "JSONModel");
 
 			this.getView().setModel(new ReportModel().getModel(), "InputsModel");
+			this.getView().byId("ToMattedr3").setProperty("editable",false);
 
 		},
 		listSorting: function(){
 		alert("List Sorting");	
 		},
 		onPress: function(oEvent) {
+			this.getView().byId("ToMattedr3").setProperty("editable",true);
 
 			debugger;
 

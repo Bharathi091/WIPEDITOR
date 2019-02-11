@@ -91,6 +91,7 @@
 				"preload": true
 			}
 		},
+	
 		"routing": {
 			"config": {
 				"routerClass": "sap.m.routing.Router",

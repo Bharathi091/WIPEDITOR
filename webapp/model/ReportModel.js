@@ -16,6 +16,7 @@ sap.ui.define([
 					Line_Item_Edits: false,
 					Line_Item_Transfers: false
 				},
+			
 				Countries_collection: [{
 				    Key: "dataEn",
 				    Text:"English" 
@@ -52,6 +53,231 @@ sap.ui.define([
 					Consolidate: false,
 					Mass_Transfer: false,
 					Split_Transfer: false
+				},
+				
+				Export:{
+					filters: ["Filter1", "Filter2", "Filter3", "Filter4"],
+					Filter1:{
+						table: "WipDetailsSet",
+						
+						createcontrols: [{
+								"key": "Belnr",
+								"type": "text",
+								"userCol": "Document Number"
+							}, {
+								"key": "Awtyp",
+								"type": "text",
+								"userCol": "Transtype"
+							}
+						
+							, {
+								"key": "ZzbgrpDesc",
+								"type": "text",
+								"userCol": "Activity Description"
+							},
+							{
+								"key": "Bldat",
+								"type": "DatePicker",
+								"userCol": "Activity Description"
+							},
+							{
+								"key": "Tdid",
+								"type": "text",
+								"userCol": "Time Keeper no "
+							},
+								{
+								"key": "Tdname",
+								"type": "text",
+								"userCol": "Time Keeper Name"
+							},
+								{
+								"key": "Quantity",
+								"type": "text",
+								"userCol": "Quantity"
+							}
+							
+
+						],
+						
+						Columns: {
+							Belnr: "",
+							Awtyp: "",
+							
+							ZzbgrpDesc: "",
+							Bldat: "",
+							Tdid: "",
+							Tdname: "",
+							Quantity: ""
+
+						}
+	
+				},
+				
+					Filter2:{
+						table: "WipDetailsSet1",
+						
+						createcontrols: [{
+								"key": "Belnr",
+								"type": "text",
+								"userCol": "Document Number"
+							}, {
+								"key": "Awtyp",
+								"type": "text",
+								"userCol": "Transtype"
+							}
+						
+							, {
+								"key": "ZzbgrpDesc",
+								"type": "text",
+								"userCol": "Activity Description"
+							},
+							{
+								"key": "Bldat",
+								"type": "DatePicker",
+								"userCol": "Activity Description"
+							},
+							{
+								"key": "Tdid",
+								"type": "text",
+								"userCol": "Time Keeper no "
+							},
+								{
+								"key": "Tdname",
+								"type": "text",
+								"userCol": "Time Keeper Name"
+							},
+								{
+								"key": "Quantity",
+								"type": "text",
+								"userCol": "Quantity"
+							}
+							
+
+						],
+						
+						Columns: {
+							Belnr: "",
+							Awtyp: "",
+							
+							ZzbgrpDesc: "",
+							Bldat: "",
+							Tdid: "",
+							Tdname: "",
+							Quantity: ""
+
+						}
+	
+				},
+					Filter3:{
+						table: "WipDetailsSet2",
+						
+						createcontrols: [{
+								"key": "Belnr",
+								"type": "text",
+								"userCol": "Document Number"
+							}, {
+								"key": "Awtyp",
+								"type": "text",
+								"userCol": "Transtype"
+							}
+						
+							, {
+								"key": "ZzbgrpDesc",
+								"type": "text",
+								"userCol": "Activity Description"
+							},
+							{
+								"key": "Bldat",
+								"type": "DatePicker",
+								"userCol": "Activity Description"
+							},
+							{
+								"key": "Tdid",
+								"type": "text",
+								"userCol": "Time Keeper no "
+							},
+								{
+								"key": "Tdname",
+								"type": "text",
+								"userCol": "Time Keeper Name"
+							},
+								{
+								"key": "Quantity",
+								"type": "text",
+								"userCol": "Quantity"
+							}
+							
+
+						],
+						
+						Columns: {
+							Belnr: "",
+							Awtyp: "",
+							
+							ZzbgrpDesc: "",
+							Bldat: "",
+							Tdid: "",
+							Tdname: "",
+							Quantity: ""
+
+						}
+	
+				},
+					Filter4:{
+						table: "WipDetailsSet3",
+						
+						createcontrols: [{
+								"key": "Belnr",
+								"type": "text",
+								"userCol": "Document Number"
+							}, {
+								"key": "Awtyp",
+								"type": "text",
+								"userCol": "Transtype"
+							}
+						
+							, {
+								"key": "ZzbgrpDesc",
+								"type": "text",
+								"userCol": "Activity Description"
+							},
+							{
+								"key": "Bldat",
+								"type": "DatePicker",
+								"userCol": "Activity Description"
+							},
+							{
+								"key": "Tdid",
+								"type": "text",
+								"userCol": "Time Keeper no "
+							},
+								{
+								"key": "Tdname",
+								"type": "text",
+								"userCol": "Time Keeper Name"
+							},
+								{
+								"key": "Quantity",
+								"type": "text",
+								"userCol": "Quantity"
+							}
+							
+
+						],
+						
+						Columns: {
+							Belnr: "",
+							Awtyp: "",
+							
+							ZzbgrpDesc: "",
+							Bldat: "",
+							Tdid: "",
+							Tdname: "",
+							Quantity: ""
+
+						}
+	
+				}
 				}
 					
 				

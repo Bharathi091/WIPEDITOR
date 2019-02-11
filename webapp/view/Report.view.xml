@@ -18,7 +18,9 @@
 			</smartFilterBar:SmartFilterBar>
 			<SplitApp id="SplitApp" initialDetail="detail" initialMaster="master" orientationChange="onOrientationChange">
 				<detailPages >
+					
 					<Page showHeader="false">
+						
 						<Button icon="sap-icon://menu2" id="hide" press="onHide"></Button>
 						<Button icon="sap-icon://menu2" visible="false" id="show" press="onHide1"></Button>
 						<SearchField width="23%" class="searchPosition"/>
@@ -44,7 +46,7 @@
 												<Button icon="sap-icon://synchronize" press="Reload"/>
 												<Button icon="sap-icon://action-settings" press="Settings"/>
 												<Button icon="sap-icon://filter" press="filterTable"/>
-												<Button icon="sap-icon://download" press="Export"/>
+												<Button icon="sap-icon://download" press="onExport"/>
 											</l:HorizontalLayout>
 										</f:content>
 									</f:SimpleForm>
@@ -724,7 +726,7 @@
 													<!--<smartField:SmartField contextEditable="true" entitySet="WipDetailsSet" id="ToMatter3" value="{ToMatter}">-->
 														
 													<!--</smartField:SmartField>-->
-													<smartField:SmartField id="ToMatter3" entitySet="WipDetailsSet"  contextEditable="true" value="{ToMatter}"/>
+													<smartField:SmartField id="ToMattedr3" entitySet="WipMattersSet"  contextEditable="true" value="{Pspid}"/>
 												</uitbl:template>
 											</uitbl:Column>
 											<!--<uitbl:Column width="8rem" filterProperty="Kunrg" sortProperty="Kunrg" showSortMenuEntry="true" autoResizable="true">-->
@@ -857,6 +859,7 @@
 						<!--		<ObjectListItem counter="0" title="{invoice>/Matter}"></ObjectListItem>-->
 						<!--	</items>-->
 						<!--</List>-->
+				
 						<l:HorizontalLayout class="sapUiContentPadding">
 							<SearchField width="80%"/>
 							<Button icon="sap-icon://sorting-ranking" press="listSorting"/>
