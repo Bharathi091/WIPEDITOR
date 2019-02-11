@@ -12,7 +12,7 @@ sap.ui.define([
 	return BaseController.extend("wip.controller.Report", {
 		
 		onInit: function() {
-			debugger;
+			
 
 			this.arr = [];
 
